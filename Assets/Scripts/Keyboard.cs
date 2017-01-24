@@ -26,7 +26,7 @@ public class Keyboard : MonoBehaviour
 			//8行目のinputFieldが引数
             obj.AddComponent<InsertButton>().Initialize(character, inputField);
 			//呼び出し
-            AddTextMesh(obj);
+//            AddTextMesh(obj);
         }
 
         // BackSpace button
@@ -42,22 +42,22 @@ public class Keyboard : MonoBehaviour
 			//AddComponent<BackSpaceButton>()でBackSpaceButtonスクリプトを参照
             obj.AddComponent<BackSpaceButton>().Initialize(inputField);
 			//呼び出し
-           AddTextMesh(obj);
+//           AddTextMesh(obj);
         }
     }
-
-	//生成したobjのテキスト情報を設定
-    static void AddTextMesh(GameObject parent)
-    {
-        var obj = new GameObject("Text Mesh");
-        obj.transform.SetParent(parent.transform, false);
-        obj.transform.localScale = Vector3.one * 0.1f;
-
-        var textMesh = obj.AddComponent<TextMesh>();
-        textMesh.text = parent.name;
-        textMesh.color = Color.black;
-        textMesh.alignment = TextAlignment.Center;
-        textMesh.anchor = TextAnchor.MiddleCenter;
-        textMesh.fontSize = 30;
-    }
+//
+//	//生成したobjのテキスト情報を設定
+//    static void AddTextMesh(GameObject parent)
+//    {
+//        var obj = new GameObject("Text Mesh");
+//        obj.transform.SetParent(parent.transform, false);
+//        obj.transform.localScale = Vector3.one * 0.1f;
+//
+//        var textMesh = obj.AddComponent<TextMesh>();
+//        textMesh.text = parent.name;
+//        textMesh.color = Color.black;
+//        textMesh.alignment = TextAlignment.Center;
+//        textMesh.anchor = TextAnchor.MiddleCenter;
+//        textMesh.fontSize = 30;
+//    }
 }
